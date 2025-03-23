@@ -17,6 +17,16 @@ export const stateFromSave = (save: GameSave): GameState => ({
   currentQuestion: undefined,
 });
 
+/**
+ * A {@link GameSave} without any content
+ */
+export const EMPTY_SAVE: GameSave = { categories: [] };
+
+/**
+ * A {@link GameState} without any content
+ */
+export const EMPTY_STATE: GameState = stateFromSave(EMPTY_SAVE);
+
 export type GameSave = {
   /**
    * Categories to display along with their questions
