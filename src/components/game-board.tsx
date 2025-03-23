@@ -11,7 +11,7 @@ export const GameBoard = component$(
   }) => {
     const gameState = useContext(gameStateContext);
     return (
-      <div class="bg-neutral grid h-full w-full auto-cols-fr grid-flow-col grid-rows-[repeat(2,auto)] text-center text-2xl font-bold text-wrap break-all lg:text-3xl xl:text-4xl 2xl:text-5xl">
+      <div class="bg-neutral grid h-full w-full auto-cols-fr grid-flow-col grid-rows-[repeat(2,auto)] text-center text-2xl font-bold [overflow-wrap:anywhere] lg:text-3xl xl:text-4xl 2xl:text-5xl">
         {gameState.categories.map(({ name, questions }, idx) => (
           <>
             <div
