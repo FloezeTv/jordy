@@ -1,6 +1,23 @@
 import { createContextId } from "@builder.io/qwik";
 
-export type GameState = {
+export type GameState = GameSave & {
+  /**
+   * The current question to display
+   */
+  currentQuestion: Question | undefined;
+};
+
+/**
+ * Converts a {@link GameSave} to a {@link GameState}
+ * @param save the {@link GameSave} to convert
+ * @returns the converted {@link GameState}
+ */
+export const stateFromSave = (save: GameSave): GameState => ({
+  ...save,
+  currentQuestion: undefined,
+});
+
+export type GameSave = {
   /**
    * Categories to display along with their questions
    */
