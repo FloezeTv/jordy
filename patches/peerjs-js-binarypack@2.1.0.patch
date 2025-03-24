@@ -1,0 +1,39 @@
+diff --git a/dist/binarypack.cjs b/dist/binarypack.cjs
+index 2430c6b7d2b278866bf7e70084e439a7e60ecb36..7355e25867511d15cb290fb60dabb377bdfd93fd 100644
+--- a/dist/binarypack.cjs
++++ b/dist/binarypack.cjs
+@@ -263,7 +263,7 @@ class $305e16fc3067229c$export$b9ec4b114aa40074 {
+         } else if (typeof value === "boolean") {
+             if (value === true) this._bufferBuilder.append(0xc3);
+             else if (value === false) this._bufferBuilder.append(0xc2);
+-        } else if (value === undefined) this._bufferBuilder.append(0xc0);
++        } else if (value === undefined) this._bufferBuilder.append(0xc1);
+         else if (typeof value === "object") {
+             if (value === null) this._bufferBuilder.append(0xc0);
+             else {
+diff --git a/dist/binarypack.mjs b/dist/binarypack.mjs
+index 829d7d079ad224ea4b7d4314992242ec4ef2baa6..31d851659376fabb49dae6ebd727cbf41dedd46b 100644
+--- a/dist/binarypack.mjs
++++ b/dist/binarypack.mjs
+@@ -255,7 +255,7 @@ class $0cfd7828ad59115f$export$b9ec4b114aa40074 {
+         } else if (typeof value === "boolean") {
+             if (value === true) this._bufferBuilder.append(0xc3);
+             else if (value === false) this._bufferBuilder.append(0xc2);
+-        } else if (value === undefined) this._bufferBuilder.append(0xc0);
++        } else if (value === undefined) this._bufferBuilder.append(0xc1);
+         else if (typeof value === "object") {
+             if (value === null) this._bufferBuilder.append(0xc0);
+             else {
+diff --git a/lib/binarypack.ts b/lib/binarypack.ts
+index a2b7df8d150ffb979fa5abdeb56f8cdfa09b3cc6..b11d9cc8c021432bcaddb0b4e13fc124dc97828f 100644
+--- a/lib/binarypack.ts
++++ b/lib/binarypack.ts
+@@ -316,7 +316,7 @@ export class Packer {
+ 				this._bufferBuilder.append(0xc2);
+ 			}
+ 		} else if (value === undefined) {
+-			this._bufferBuilder.append(0xc0);
++			this._bufferBuilder.append(0xc1);
+ 		} else if (typeof value === "object") {
+ 			if (value === null) {
+ 				this._bufferBuilder.append(0xc0);

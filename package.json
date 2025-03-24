@@ -48,5 +48,9 @@
     "unplugin-typia": "^0.1.0-beta.0",
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "patchedDependencies": {
+    "peerjs-js-binarypack@2.1.0": "patches/peerjs-js-binarypack@2.1.0.patch",
+    "peerjs@1.5.4": "patches/peerjs@1.5.4.patch"
   }
 }

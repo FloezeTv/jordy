@@ -28,6 +28,10 @@
       },
     },
   },
+  "patchedDependencies": {
+    "peerjs@1.5.4": "patches/peerjs@1.5.4.patch",
+    "peerjs-js-binarypack@2.1.0": "patches/peerjs-js-binarypack@2.1.0.patch",
+  },
   "packages": {
     "@builder.io/qwik": ["@builder.io/qwik@1.12.1", "", { "dependencies": { "csstype": "^3.1" }, "peerDependencies": { "vite": "^5" }, "bin": { "qwik": "qwik-cli.cjs" } }, "sha512-fL+GuzJ/fp9OwhegPkn2dZXp4RjWnY0mNhgg7OJDS2qxftLmuJHs4sSJZ9ayvLRBVUNVPVX92u+SodiO5GDsnQ=="],
 
